@@ -10,7 +10,7 @@ const TopBox = () => {
   return (
     <div className={`top-box ${expand ? 'expanded' : ''}`}>
       <div className="top-header">
-        <img src="/src/assets/profileimg.jpg" alt="Bibek" />
+        <img src="public/assets/profileimg.jpg" alt="Bibek" />
         <button onClick={() => setExpand(!expand)}>
           <MdKeyboardDoubleArrowDown />
         </button>
