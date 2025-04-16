@@ -21,7 +21,7 @@ const Experience = () => {
         <div className="training-container">
         <h3>Tetratrion Technologies</h3>
         <p>Fullstack Web Developer Intern</p>
-        <p>01/2024-05-2024</p>
+        <p>01/2024-05/2024</p>
         <p>Created a user friendly web application to make connection between local sellers/vendors/suppliers with the world. Purchase products from different wholesalers from multiple states.Integrated with in-built invoice generator.</p>
         </div>
         <div className="training-container">
