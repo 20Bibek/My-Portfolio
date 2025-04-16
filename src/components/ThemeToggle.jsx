@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import './ThemeToggle.css';
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ onToggle }) => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   useEffect(() => {
@@ -11,13 +11,15 @@ const ThemeToggle = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    if (onToggle) onToggle(newTheme);
   };
 
   return (
-    <button className="theme-toggle" onClick={toggleTheme} title="Toggle Theme">
+    <span className="theme-toggle-icon" onClick={toggleTheme} title="Toggle Theme" role="button" tabIndex={0}>
       {theme === 'dark' ? <FaSun /> : <FaMoon />}
-    </button>
+    </span>
   );
 };
 
