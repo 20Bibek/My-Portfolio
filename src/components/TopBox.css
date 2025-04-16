@@ -1,0 +1,215 @@
+/* TopBox Container */
+.top-box {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 100px;
+    /* max-width: 600px; */
+    /* background: transparent; */
+    color: var(--text-primary);
+    /* border: 2px solid var(--accent); */
+    z-index: 1000;
+    transition: max-height 0.3s ease-in-out, transform 0.5s ease-in-out;
+    margin: 1rem;
+  }
+  
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--accent);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+
+  }
+  
+  .top-header img {
+    height: 70px;
+    width: 70px;
+    border-radius: 30%;
+    object-fit: cover;
+  }
+  
+  .top-header button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid darkseagreen;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkseagreen;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .top-header button:hover {
+    background-color: var(--accent);
+    color: #fff;
+  }
+  
+  /* Content Section */
+  .top-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--content-bg);
+    color: var(--text-primary);
+    /* border-top: 2px solid var(--accent); */
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out; /* Smooth transition */
+  }
+  
+  /* Social Links */
+  .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1rem 0;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    background: var(--bg-light);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .social-link:hover {
+    background: var(--accent-light);
+  }
+  
+  .social-link .icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+  
+  .social-link a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  hr{
+    width: 100%;
+  }
+  
+  /* Resume Button */
+  .resume-btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resume-btn:hover {
+    background-color: var(--accent-dark);
+  }
+  
+  /* Smooth Expand and Collapse */
+  .top-box.expanded .top-content {
+    opacity: 1; /* Content visible */
+    max-height: 300px;
+    /* border: 1px solid var(--accent); */
+  }
+  
+  .top-box:not(.expanded) .top-content {
+    opacity: 0; /* Content hidden */
+    height: 0; /* Collapse the content */
+    pointer-events: none; /* Disable interaction when collapsed */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .top-box {
+      width: 90%;
+    }
+  
+    .top-header {
+      padding: 0.8rem;
+    }
+  
+    .top-header img {
+      height: 60px;
+      width: 60px;
+    }
+  
+    .top-header button {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .resume-btn {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .top-box {
+        left: 46%;
+        
+
+      }
+    .top-header {
+      flex-direction: row;
+      align-items: center;
+      height: 405x;
+
+    }
+  
+    .socials {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .resume-btn {
+      width: 60%;
+      max-width: none;
+    }
+  }
+  
+  /* Light Theme */
+  :root {
+    --bg: #ffffff;
+    --text-primary: #1a1a1a;
+    --accent:  rgb(0, 111, 128);
+    --accent-dark:  rgb(0, 111, 128);
+    --header-bg: #f7f7f7;
+    --content-bg: #fdfdfd;
+  }
+  
+  /* Dark Theme */
+  body.dark {
+    --bg: #121212;
+    --text-primary: #e0e0e0;
+    --accent:  rgb(0, 111, 128);
+    --accent-dark: rgba(63, 26, 213, 1);
+    --header-bg: #1f1f1f;
+    --content-bg: #1f1f1f;
+  }
+  

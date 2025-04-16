@@ -1,0 +1,83 @@
+.navbar {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    background: linear-gradient(270deg, #000000, rgba(38, 70, 151, 0.706), rgb(0, 111, 128),darkseagreen);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    border: 1px solid var(--border-color);
+    transition: color 0.3s ease;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .navbar a,
+  .navbar button {
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navbar a:hover,
+  .navbar button:hover {
+    transform: scale(1.05);
+    color:  seagreen;
+  }
+  
+  /* Light Theme Variables */
+  :root {
+    --text: #1a1a1a;
+    --accent:  rgb(0, 111, 128);
+    --border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Dark Theme Overrides */
+  body.dark {
+    --text: #f0f0f0;
+    --accent:  rgb(0, 111, 128);
+    --border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .navbar {
+      padding: 0.6rem 1rem;
+    }
+  
+    .navbar a,
+    .navbar button {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar{
+        width: 45vh;
+        gap: 15px;
+    }
+  }
