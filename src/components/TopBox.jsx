@@ -3,6 +3,7 @@ import './TopBox.css';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { BiLogoGmail } from 'react-icons/bi';
+import profileimg from './assets/profileimg.jpg'
 
 const TopBox = () => {
   const [expand, setExpand] = useState(false);
@@ -10,7 +11,7 @@ const TopBox = () => {
   return (
     <div className={`top-box ${expand ? 'expanded' : ''}`}>
       <div className="top-header">
-        <img src="public/assets/profileimg.jpg" alt="Bibek" />
+        <img src={profileimg} alt="Bibek" />
         <button onClick={() => setExpand(!expand)}>
           <MdKeyboardDoubleArrowDown />
         </button>

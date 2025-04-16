@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './Contact.css';
 import { GrSend } from "react-icons/gr";
-
+import contactimg from './assets/contactimg.png'
 const Contact = () => {
   const form = useRef();
 
@@ -47,7 +47,7 @@ const Contact = () => {
 
       <div className="contact-image-side">
         <img
-          src="src/assets/—Pngtree—customer service concept with a_8644423.png"
+          src={contactimg}
           alt="Contact Visual"
         />
       </div>
