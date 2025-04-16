@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Experience from './components/Experience';
 import { useState } from 'react';
-import TopBox from './components/Topbox';
+import TopBox from './components/TopBox';
 
 
 function App() {
