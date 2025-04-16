@@ -16,7 +16,7 @@ const About = () => {
           I enjoy solving problems and crafting efficient, scalable digital solutions with modern technologies.
         </p>
         <button className="know-more" onClick={() => navigate('/experience')}>
-          Know More About Me
+          About Me
         </button>
       </div>
       <div className="work">
