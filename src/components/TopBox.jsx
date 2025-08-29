@@ -76,7 +76,7 @@ const TopBox = () => {
           </div>
         </div>
 
-        <a href="/resume.pdf" download className="resume-btn">
+        <a href="src/components/assets/BibekA_Resume.pdf" download className="resume-btn">
           Download Resume
         </a>
       </div>
